@@ -1,0 +1,36 @@
+@font-face {
+    font-family:'MusiSync';
+    src:url("MusisyncKVLZ.ttf");
+}
+
+@font-face {
+    font-family:'Tchaikovsky';
+    src:url("Tchaikovsky.ttf");
+}
+
+.notes {
+    -fx-font-family: MusiSync;
+    -fx-text-size: 100px;
+}
+
+.notes2 {
+    -fx-font-family: Tchaikovsky;
+    -fx-text-size: 100px;
+}
+
+.button1 {
+    -fx-background-image: url('WhiteKey.png');
+    -fx-background-color: transparent;
+    -fx-background-size: 47px 200px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.button2 {
+    -fx-background-image: url('BlackKey.png');
+    -fx-background-color: transparent;
+    -fx-background-size: 35px 100px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
