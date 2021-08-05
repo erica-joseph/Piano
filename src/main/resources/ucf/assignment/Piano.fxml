@@ -256,7 +256,7 @@
             <Font size="96.0" />
          </font>
       </Text>
-      <Text fx:id="eight" layoutX="753.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2" text="O">
+      <Text fx:id="eight" layoutX="753.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2" text="O">
          <font>
             <Font size="96.0" />
          </font>
