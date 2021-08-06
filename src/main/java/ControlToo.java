@@ -6,7 +6,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -51,38 +50,20 @@ public class ControlToo extends Application {
     public void pressC() {
         Start.setStyle("-fx-underline: true");
         Start.setOnKeyPressed(event1 -> {
-                    //low
-                    if (event1.getCode() == KeyCode.A) {
-                        first.fire();
-                    }
-                    else if (event1.getCode() == KeyCode.S) {
-                        second.fire();
-                    }
-                    else if (event1.getCode() == KeyCode.D) {
-                        third.fire();
-                    }
-                    else if (event1.getCode() == KeyCode.F) {
-                        fourth.fire();
-                    }
-                    else if (event1.getCode() == KeyCode.J) {
-                        fifth.fire();
-                    }
-                    else if (event1.getCode() == KeyCode.K) {
-                        sixth.fire();
-                    }
-                    else if (event1.getCode() == KeyCode.L) {
-                        seventh.fire();
-                    }
-
-                    //none
-                    else if (event1.getCode() == KeyCode.SPACE) {
-                        eighth.fire();
-                    }
+            switch (event1.getCode()) {
+                case A -> first.fire();
+                case S -> second.fire();
+                case D -> third.fire();
+                case F -> fourth.fire();
+                case J -> fifth.fire();
+                case K -> sixth.fire();
+                case L -> seventh.fire();
+                case SPACE -> eighth.fire();
+                }
                 });
     }
 
     //play notes
-
     public void playC() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
         //reset all notes
         reset2();
@@ -105,8 +86,8 @@ public class ControlToo extends Application {
         note = AudioSystem.getAudioInputStream(new File(clipPath));
         Clip clip = AudioSystem.getClip();
         clip.open(note);
-
-        
+        FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+        gainControl.setValue(-15.0f); // Reduce volume by 10 decibels.
         clip.start();
     }
 
@@ -132,6 +113,8 @@ public class ControlToo extends Application {
         Clip clip = AudioSystem.getClip();
         clip.open(note);
 
+        FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+        gainControl.setValue(-15.0f); // Reduce volume by 10 decibels.
         
         clip.start();
     }
@@ -156,8 +139,8 @@ public class ControlToo extends Application {
         note = AudioSystem.getAudioInputStream(new File(clipPath));
         Clip clip = AudioSystem.getClip();
         clip.open(note);
-
-        
+        FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+        gainControl.setValue(-15.0f); // Reduce volume by 10 decibels.
         clip.start();
     }
 
@@ -180,8 +163,8 @@ public class ControlToo extends Application {
         note = AudioSystem.getAudioInputStream(new File(clipPath));
         Clip clip = AudioSystem.getClip();
         clip.open(note);
-
-        
+        FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+        gainControl.setValue(-15.0f); // Reduce volume by 10 decibels.
         clip.start();
     }
 
@@ -203,8 +186,8 @@ public class ControlToo extends Application {
         note = AudioSystem.getAudioInputStream(new File(clipPath));
         Clip clip = AudioSystem.getClip();
         clip.open(note);
-
-        
+        FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+        gainControl.setValue(-15.0f); // Reduce volume by 10 decibels.
         clip.start();
     }
 
@@ -225,8 +208,8 @@ public class ControlToo extends Application {
         note = AudioSystem.getAudioInputStream(new File(clipPath));
         Clip clip = AudioSystem.getClip();
         clip.open(note);
-
-        
+        FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+        gainControl.setValue(-15.0f); // Reduce volume by 10 decibels.
         clip.start();
     }
 
@@ -246,8 +229,8 @@ public class ControlToo extends Application {
         note = AudioSystem.getAudioInputStream(new File(clipPath));
         Clip clip = AudioSystem.getClip();
         clip.open(note);
-
-        
+        FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+        gainControl.setValue(-15.0f); // Reduce volume by 10 decibels.
         clip.start();
     }
 
@@ -266,8 +249,8 @@ public class ControlToo extends Application {
         note = AudioSystem.getAudioInputStream(new File(clipPath));
         Clip clip = AudioSystem.getClip();
         clip.open(note);
-
-        
+        FloatControl gainControl = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+        gainControl.setValue(-15.0f); // Reduce volume by 10 decibels.
         clip.start();
     }
 
