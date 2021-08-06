@@ -12,180 +12,154 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="568.0" prefWidth="954.0" style="-fx-background-color: #000000;" styleClass="#pane"
-            stylesheets="@Style/piano.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="ControlToo">
-   <ImageView fitHeight="618.0" fitWidth="968.0" layoutX="-11.0" layoutY="22.0" pickOnBounds="true"
-              preserveRatio="true">
-      <Image url="@Style/PianoSet5.png"/>
+<AnchorPane prefHeight="568.0" prefWidth="954.0" style="-fx-background-color: #000000;" styleClass="#pane" stylesheets="@Style/piano.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControlToo">
+   <ImageView fitHeight="618.0" fitWidth="968.0" layoutX="-11.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@Style/PianoSet5.png" />
    </ImageView>
    <Text layoutX="136.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes" text="G">
       <font>
-         <Font size="200.0"/>
+         <Font size="200.0" />
       </font>
    </Text>
-   <Text fx:id="one" layoutX="211.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2"
-         text="O">
+   <Text fx:id="one" layoutX="211.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2" text="O">
       <font>
-         <Font size="96.0"/>
+         <Font size="96.0" />
       </font>
    </Text>
-   <Text fx:id="two" layoutX="282.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2"
-         text="O">
+   <Text fx:id="two" layoutX="282.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2" text="O">
       <font>
-         <Font size="96.0"/>
+         <Font size="96.0" />
       </font>
    </Text>
-   <Text fx:id="three" layoutX="360.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2"
-         text="O">
+   <Text fx:id="three" layoutX="360.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2" text="O">
       <font>
-         <Font size="96.0"/>
+         <Font size="96.0" />
       </font>
    </Text>
-   <Text fx:id="four" layoutX="444.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2"
-         text="O">
+   <Text fx:id="four" layoutX="444.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2" text="O">
       <font>
-         <Font size="96.0"/>
+         <Font size="96.0" />
       </font>
    </Text>
-   <Text fx:id="five" layoutX="526.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2"
-         text="O">
+   <Text fx:id="five" layoutX="526.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2" text="O">
       <font>
-         <Font size="96.0"/>
+         <Font size="96.0" />
       </font>
    </Text>
-   <Text fx:id="six" layoutX="606.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2"
-         text="O">
+   <Text fx:id="six" layoutX="606.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2" text="O">
       <font>
-         <Font size="96.0"/>
+         <Font size="96.0" />
       </font>
    </Text>
-   <Text fx:id="seven" layoutX="683.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2"
-         text="O">
+   <Text fx:id="seven" layoutX="683.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2" text="O">
       <font>
-         <Font size="96.0"/>
+         <Font size="96.0" />
       </font>
    </Text>
-   <Text fx:id="eight" layoutX="756.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2"
-         text="O">
+   <Text fx:id="eight" layoutX="756.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2" text="O">
       <font>
-         <Font size="96.0"/>
+         <Font size="96.0" />
       </font>
    </Text>
-   <Rectangle arcHeight="5.0" arcWidth="5.0" height="37.0" layoutX="-8.0" layoutY="-7.0" stroke="TRANSPARENT"
-              strokeType="INSIDE" width="962.0"/>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" height="37.0" layoutX="-8.0" layoutY="-7.0" stroke="TRANSPARENT" strokeType="INSIDE" width="962.0" />
    <ImageView fitHeight="19.0" fitWidth="171.0" layoutX="10.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
-      <Image url="@Style/TremoloLogo.png"/>
+      <Image url="@Style/TremoloLogo.png" />
    </ImageView>
-   <Rectangle arcHeight="5.0" arcWidth="5.0" height="35.0" layoutX="2.0" layoutY="292.0" stroke="TRANSPARENT"
-              strokeType="INSIDE" width="962.0"/>
-   <Button fx:id="exitButton" layoutX="931.0" layoutY="-1.0" mnemonicParsing="false" onAction="#exitProgram"
-           style="-fx-font-weight: BOLD;" styleClass="exit" text="✖">
+   <Rectangle arcHeight="5.0" arcWidth="5.0" height="35.0" layoutX="2.0" layoutY="292.0" stroke="TRANSPARENT" strokeType="INSIDE" width="962.0" />
+   <Button fx:id="exitButton" layoutX="931.0" layoutY="-1.0" mnemonicParsing="false" onAction="#exitProgram" style="-fx-font-weight: BOLD;" styleClass="exit" text="✖">
       <textFill>
          <LinearGradient>
             <stops>
                <Stop>
                   <color>
-                     <Color red="0.10196078568696976" green="0.6549019813537598" blue="0.7098039388656616"/>
+                     <Color red="0.10196078568696976" green="0.6549019813537598" blue="0.7098039388656616" />
                   </color>
                </Stop>
                <Stop offset="1.0">
                   <color>
-                     <Color red="0.03921568766236305" green="0.3529411852359772" blue="0.3843137323856354"/>
+                     <Color red="0.03921568766236305" green="0.3529411852359772" blue="0.3843137323856354" />
                   </color>
                </Stop>
             </stops>
          </LinearGradient>
       </textFill>
    </Button>
-   <Button fx:id="minimizeButton" layoutX="912.0" layoutY="-5.0" mnemonicParsing="false" onAction="#minimizeProgram"
-           style="-fx-font-weight: BOLD;" styleClass="exit" text="▃">
+   <Button fx:id="minimizeButton" layoutX="912.0" layoutY="-5.0" mnemonicParsing="false" onAction="#minimizeProgram" style="-fx-font-weight: BOLD;" styleClass="exit" text="▃">
       <textFill>
          <LinearGradient>
             <stops>
                <Stop>
                   <color>
-                     <Color red="0.10196078568696976" green="0.6549019813537598" blue="0.7098039388656616"/>
+                     <Color red="0.10196078568696976" green="0.6549019813537598" blue="0.7098039388656616" />
                   </color>
                </Stop>
                <Stop offset="1.0">
                   <color>
-                     <Color red="0.03921568766236305" green="0.3529411852359772" blue="0.3843137323856354"/>
+                     <Color red="0.03921568766236305" green="0.3529411852359772" blue="0.3843137323856354" />
                   </color>
                </Stop>
             </stops>
          </LinearGradient>
       </textFill>
    </Button>
-   <ImageView blendMode="MULTIPLY" fitHeight="198.0" fitWidth="934.0" layoutX="70.0" layoutY="340.0" pickOnBounds="true"
-              preserveRatio="true">
-      <Image url="@Style/GourdFlute3.png"/>
+   <ImageView blendMode="MULTIPLY" fitHeight="198.0" fitWidth="934.0" layoutX="70.0" layoutY="340.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@Style/GourdFlute3.png" />
    </ImageView>
-   <ImageView fitHeight="198.0" fitWidth="934.0" layoutX="60.0" layoutY="330.0" pickOnBounds="true"
-              preserveRatio="true">
-      <Image url="@Style/GourdtoExport2.png"/>
+   <ImageView fitHeight="198.0" fitWidth="934.0" layoutX="60.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@Style/GourdtoExport2.png" />
    </ImageView>
-   <Button fx:id="sixth" layoutX="460.0" layoutY="407.0" mnemonicParsing="false" onAction="#playA" prefHeight="41.0"
-           prefWidth="52.0" styleClass="button3" text="6" textFill="WHITE">
+   <Button fx:id="sixth" layoutX="460.0" layoutY="407.0" mnemonicParsing="false" onAction="#playA" prefHeight="41.0" prefWidth="52.0" styleClass="button3" text="6" textFill="WHITE">
       <tooltip>
-         <Tooltip text="K"/>
+         <Tooltip text="K" />
       </tooltip>
    </Button>
-   <Button fx:id="fifth" layoutX="497.0" layoutY="407.0" mnemonicParsing="false" onAction="#playG" prefHeight="41.0"
-           prefWidth="52.0" styleClass="button3" text="5" textFill="WHITE">
+   <Button fx:id="fifth" layoutX="497.0" layoutY="407.0" mnemonicParsing="false" onAction="#playG" prefHeight="41.0" prefWidth="52.0" styleClass="button3" text="5" textFill="WHITE">
       <tooltip>
-         <Tooltip text="J"/>
+         <Tooltip text="J" />
       </tooltip>
    </Button>
-   <Button fx:id="fourth" layoutX="535.0" layoutY="408.0" mnemonicParsing="false" onAction="#playF" prefHeight="41.0"
-           prefWidth="52.0" styleClass="button3" text="4" textFill="WHITE">
+   <Button fx:id="fourth" layoutX="535.0" layoutY="408.0" mnemonicParsing="false" onAction="#playF" prefHeight="41.0" prefWidth="52.0" styleClass="button3" text="4" textFill="WHITE">
       <tooltip>
-         <Tooltip text="F"/>
+         <Tooltip text="F" />
       </tooltip>
    </Button>
-   <Button fx:id="third" layoutX="581.0" layoutY="409.0" mnemonicParsing="false" onAction="#playE" prefHeight="41.0"
-           prefWidth="52.0" styleClass="button3" text="3" textFill="WHITE">
+   <Button fx:id="third" layoutX="581.0" layoutY="409.0" mnemonicParsing="false" onAction="#playE" prefHeight="41.0" prefWidth="52.0" styleClass="button3" text="3" textFill="WHITE">
       <tooltip>
-         <Tooltip text="D"/>
+         <Tooltip text="D" />
       </tooltip>
    </Button>
-   <Button fx:id="second" layoutX="623.0" layoutY="409.0" mnemonicParsing="false" onAction="#playD" prefHeight="41.0"
-           prefWidth="52.0" styleClass="button3" text="2" textFill="WHITE">
+   <Button fx:id="second" layoutX="623.0" layoutY="409.0" mnemonicParsing="false" onAction="#playD" prefHeight="41.0" prefWidth="52.0" styleClass="button3" text="2" textFill="WHITE">
       <tooltip>
-         <Tooltip text="S"/>
+         <Tooltip text="S" />
       </tooltip>
    </Button>
-   <Button fx:id="first" layoutX="670.0" layoutY="409.0" mnemonicParsing="false" onAction="#playC" prefHeight="41.0"
-           prefWidth="52.0" styleClass="button3" text="1" textFill="WHITE">
+   <Button fx:id="first" layoutX="670.0" layoutY="409.0" mnemonicParsing="false" onAction="#playC" prefHeight="41.0" prefWidth="52.0" styleClass="button3" text="1" textFill="WHITE">
       <tooltip>
-         <Tooltip text="A"/>
+         <Tooltip text="A" />
       </tooltip>
    </Button>
-   <Button fx:id="seventh" layoutX="613.0" layoutY="452.0" mnemonicParsing="false" onAction="#playB" prefHeight="19.0"
-           prefWidth="28.0" styleClass="button4" text="7" textFill="WHITE">
+   <Button fx:id="seventh" layoutX="613.0" layoutY="452.0" mnemonicParsing="false" onAction="#playB" prefHeight="19.0" prefWidth="28.0" styleClass="button4" text="7" textFill="WHITE">
       <tooltip>
-         <Tooltip text="L"/>
+         <Tooltip text="L" />
       </tooltip>
    </Button>
-   <Button fx:id="eighth" layoutX="20.0" layoutY="415.0" mnemonicParsing="false" onAction="#playCh"
-           style="-fx-text-fill: transparent;" styleClass="button7" text="0">
+   <Button fx:id="eighth" layoutX="20.0" layoutY="415.0" mnemonicParsing="false" onAction="#playCh" style="-fx-text-fill: transparent;" styleClass="button7" text="0">
       <tooltip>
-         <Tooltip text="Space"/>
+         <Tooltip text="Space" />
       </tooltip>
    </Button>
-   <Button fx:id="Start" layoutX="-16" layoutY="30.0" mnemonicParsing="false" onAction="#pressC" prefHeight="72.0"
-           prefWidth="127.0" style="-fx-padding: 0px;" styleClass="key" text="⌨">
+   <Button fx:id="Start" layoutX="-16" layoutY="30.0" mnemonicParsing="false" onAction="#pressC" prefHeight="72.0" prefWidth="127.0" style="-fx-padding: 0px;" styleClass="key" text="⌨">
       <textFill>
          <LinearGradient>
             <stops>
                <Stop>
                   <color>
-                     <Color red="0.10196078568696976" green="0.6549019813537598" blue="0.7098039388656616"/>
+                     <Color red="0.10196078568696976" green="0.6549019813537598" blue="0.7098039388656616" />
                   </color>
                </Stop>
                <Stop offset="1.0">
                   <color>
-                     <Color red="0.03921568766236305" green="0.3529411852359772" blue="0.3843137323856354"/>
+                     <Color red="0.03921568766236305" green="0.3529411852359772" blue="0.3843137323856354" />
                   </color>
                </Stop>
             </stops>
@@ -194,50 +168,51 @@
       <tooltip>
          <Tooltip text="Keyboard Control">
             <font>
-               <Font name="Arial" size="12.0"/>
+               <Font name="Arial" size="12.0" />
             </font>
          </Tooltip>
       </tooltip>
    </Button>
-   <Button fx:id="gourd" layoutX="-21" layoutY="112.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="127.0"
-           style="-fx-padding: 0px;" styleClass="gourd" text="i">
+   <Button fx:id="gourd" layoutX="-21" layoutY="112.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="127.0" style="-fx-padding: 0px;" styleClass="gourd" text="i">
       <textFill>
          <LinearGradient>
             <stops>
                <Stop>
                   <color>
-                     <Color red="0.10196078568696976" green="0.6549019813537598" blue="0.7098039388656616"/>
+                     <Color red="0.10196078568696976" green="0.6549019813537598" blue="0.7098039388656616" />
                   </color>
                </Stop>
                <Stop offset="1.0">
                   <color>
-                     <Color red="0.03921568766236305" green="0.3529411852359772" blue="0.3843137323856354"/>
+                     <Color red="0.03921568766236305" green="0.3529411852359772" blue="0.3843137323856354" />
                   </color>
                </Stop>
             </stops>
          </LinearGradient>
       </textFill>
    </Button>
-   <Button fx:id="piano" layoutX="-21" layoutY="185.0" mnemonicParsing="false" onAction="#moveToPiano" prefHeight="72.0"
-           prefWidth="127.0" style="-fx-padding: 0px;" styleClass="piano" text="7">
+   <Button fx:id="piano" layoutX="-21" layoutY="185.0" mnemonicParsing="false" onAction="#moveToPiano" prefHeight="72.0" prefWidth="127.0" style="-fx-padding: 0px;" styleClass="piano" text="7">
       <textFill>
          <LinearGradient>
             <stops>
                <Stop>
                   <color>
-                     <Color red="0.10196078568696976" green="0.6549019813537598" blue="0.7098039388656616"/>
+                     <Color red="0.10196078568696976" green="0.6549019813537598" blue="0.7098039388656616" />
                   </color>
                </Stop>
                <Stop offset="1.0">
                   <color>
-                     <Color red="0.03921568766236305" green="0.3529411852359772" blue="0.3843137323856354"/>
+                     <Color red="0.03921568766236305" green="0.3529411852359772" blue="0.3843137323856354" />
                   </color>
                </Stop>
             </stops>
          </LinearGradient>
       </textFill>
       <tooltip>
-         <Tooltip text="Piano"/>
+         <Tooltip text="Piano">
+            <font>
+               <Font name="Arial" size="12.0" />
+            </font></Tooltip>
       </tooltip>
    </Button>
 </AnchorPane>

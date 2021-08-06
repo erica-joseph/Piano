@@ -59,11 +59,13 @@ public class Control extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        Start.setStyle("-fx-underline:false");
     }
 
     //a is pressed
     public void pressA() {
     Start.setOnKeyPressed(event1 -> {
+        Start.setStyle("-fx-underline: true");
         //low
         if (event1.getCode() == KeyCode.Z) {
             aLow.fire();

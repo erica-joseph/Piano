@@ -41,6 +41,7 @@ public class ControlToo extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        Start.setStyle("-fx-underline: true");
         eighth.setVisible(false);
     }
 
@@ -48,6 +49,7 @@ public class ControlToo extends Application {
 
 
     public void pressC() {
+        Start.setStyle("-fx-underline: true");
         Start.setOnKeyPressed(event1 -> {
                     //low
                     if (event1.getCode() == KeyCode.A) {

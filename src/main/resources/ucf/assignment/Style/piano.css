@@ -125,7 +125,7 @@
 }
 
 .key:hover {
--fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);
+-fx-underline: true;
 }
 
 .gourd:hover {
