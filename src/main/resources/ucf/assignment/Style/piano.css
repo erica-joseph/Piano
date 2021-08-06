@@ -4,6 +4,16 @@
 }
 
 @font-face {
+    font-family:'LEMON MILK Bold';
+    src:url("LEMONMILKBold.otf");
+}
+
+@font-face {
+    font-family:'Orchestra Icons';
+    src:url("OrchestraIcons.otf");
+}
+
+@font-face {
     font-family:'Tchaikovsky';
     src:url("Tchaikovsky.ttf");
 }
@@ -34,3 +44,102 @@
     -fx-background-position: center;
 }
 
+.button3 {
+    -fx-background-image: url('NoteButtonGourd.png');
+    -fx-background-color: transparent;
+    -fx-background-size: 30px 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-font-weight: BOLD;
+}
+
+.button4 {
+    -fx-background-image: url('NoteButtonGourd.png');
+    -fx-background-color: transparent;
+    -fx-background-size: 20px 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-font-weight: BOLD;
+}
+
+.button5 {
+    -fx-background-image: url('PotentialButtonClosed.png');
+    -fx-background-color: transparent;
+    -fx-background-size: 20px 20px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-font-weight: BOLD;
+}
+
+.button6 {
+    -fx-background-image: url('PotentialButtonClosed.png');
+    -fx-background-color: transparent;
+    -fx-background-size: 30px 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-font-weight: BOLD;
+}
+
+.button7 {
+    -fx-background-color: transparent;
+}
+
+.exit {
+    -fx-background-color: transparent;
+    -fx-font-family: LEMON MILK Bold;
+    -fx-font-size:  15px;
+}
+
+.key {
+ -fx-background-color: transparent;
+ -fx-font-size: 50px;
+ -fx-padding: 0px;
+}
+
+.gourd{
+-fx-font-family: 'Orchestra Icons';
+ -fx-background-color: transparent;
+ -fx-font-size: 50px;
+ -fx-padding: 0px;
+}
+
+.gourd2{
+-fx-font-family: 'Orchestra Icons';
+ -fx-background-color: transparent;
+ -fx-font-size: 200px;
+ -fx-padding: 0px;
+}
+
+.piano{
+  -fx-font-family: 'Orchestra Icons';
+  -fx-background-color: transparent;
+  -fx-font-size: 50px;
+  -fx-padding: 0px;
+}
+
+.piano2{
+  -fx-font-family: 'Orchestra Icons';
+  -fx-background-color: transparent;
+  -fx-font-size: 200px;
+  -fx-padding: 0px;
+}
+
+.key:hover {
+-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);
+}
+
+.gourd:hover {
+-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);
+}
+
+.piano:hover {
+-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);
+}
+
+.gourd2:hover {
+-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);
+}
+
+.piano2:hover {
+-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);
+}

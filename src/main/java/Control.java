@@ -1,4 +1,10 @@
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Paint;
@@ -8,6 +14,7 @@ import javafx.stage.Stage;
 import javax.sound.sampled.*;
 import java.io.File;
 import java.io.IOException;
+import java.util.Objects;
 
 public class Control extends Application {
 
@@ -44,17 +51,19 @@ public class Control extends Application {
     public Text six;
     public Text seven;
     public Text eight;
+    public Button exitButton;
+    public Button minimizeButton;
+    public Button Start;
+    public Button gourd;
+    public Button piano;
 
     @Override
     public void start(Stage primaryStage) {
-
-
-
     }
 
     //a is pressed
     public void pressA() {
-    aLow.setOnKeyPressed(event1 -> {
+    Start.setOnKeyPressed(event1 -> {
         //low
         if (event1.getCode() == KeyCode.Z) {
             aLow.fire();
@@ -140,6 +149,10 @@ public class Control extends Application {
 
     //lower
     public void playALow() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        aLow.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
         AudioInputStream note;
         String clipPath = "src/main/resources/ucf/assignment/MusicNotes/a3.wav";
         note = AudioSystem.getAudioInputStream(new File(clipPath));
@@ -151,6 +164,12 @@ public class Control extends Application {
     }
 
     public void playALowSharp() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+
+        //reset all keys
+        resetKeys();
+        //light up key
+        aSharp.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         AudioInputStream note;
         String clipPath = "src/main/resources/ucf/assignment/MusicNotes/a-3.wav";
         note = AudioSystem.getAudioInputStream(new File(clipPath));
@@ -162,6 +181,11 @@ public class Control extends Application {
     }
 
     public void playBLow() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        bLow.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         AudioInputStream note;
         String clipPath = "src/main/resources/ucf/assignment/MusicNotes/b4Check.wav";
         note = AudioSystem.getAudioInputStream(new File(clipPath));
@@ -173,6 +197,11 @@ public class Control extends Application {
     }
 
     public void playCLow() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        cLow.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         //reset all notes
         reset();
         //drop shadow and style current note
@@ -191,6 +220,11 @@ public class Control extends Application {
     }
 
     public void playCLowSharp() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        cSharp.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         //reset all notes
         reset();
 
@@ -205,6 +239,11 @@ public class Control extends Application {
     }
 
     public void playDLow() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        dLow.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         //reset all notes
         reset();
         //drop shadow and style current note
@@ -221,6 +260,11 @@ public class Control extends Application {
     }
 
     public void playDLowSharp() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        dSharp.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         //reset all notes
         reset();
         AudioInputStream note;
@@ -234,6 +278,11 @@ public class Control extends Application {
     }
 
     public void playELow() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        eLow.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         //reset all notes
         reset();
         //drop shadow and style current note
@@ -250,6 +299,11 @@ public class Control extends Application {
     }
 
     public void playFLow() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        fLow.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         //reset all notes
         reset();
         //drop shadow and style current note
@@ -266,6 +320,11 @@ public class Control extends Application {
     }
 
     public void playFLowSharp() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        fSharp.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         //reset all notes
         reset();
         AudioInputStream note;
@@ -279,6 +338,11 @@ public class Control extends Application {
     }
 
     public void playGLow() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        gLow.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         //reset all notes
         reset();
         //drop shadow and style current note
@@ -295,6 +359,11 @@ public class Control extends Application {
     }
 
     public void playGLowSharp() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        gSharp.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         //reset all notes
         reset();
         AudioInputStream note;
@@ -309,6 +378,11 @@ public class Control extends Application {
 
     //mid
     public void playAMid() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        aMid.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         //reset all notes
         reset();
         //drop shadow and style current note
@@ -325,6 +399,11 @@ public class Control extends Application {
     }
 
     public void playAMidSharp() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        aSharpH.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         //reset all notes
         reset();
         AudioInputStream note;
@@ -338,6 +417,11 @@ public class Control extends Application {
     }
 
     public void playBMid() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        bMid.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         //reset all notes
         reset();
         //drop shadow and style current note
@@ -354,6 +438,11 @@ public class Control extends Application {
     }
 
     public void playCMid() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        cMid.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         //reset all notes
         reset();
         //drop shadow and style current note
@@ -370,6 +459,11 @@ public class Control extends Application {
     }
 
     public void playCMidSharp() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        cSharpH.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         //reset all notes
         reset();
         AudioInputStream note;
@@ -383,6 +477,11 @@ public class Control extends Application {
     }
 
     public void playDMid() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        dMid.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         //reset all notes
         reset();
         AudioInputStream note;
@@ -396,6 +495,11 @@ public class Control extends Application {
     }
 
     public void playDMidSharp() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        dSharpH.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         //reset all notes
         reset();
         AudioInputStream note;
@@ -409,6 +513,11 @@ public class Control extends Application {
     }
 
     public void playEMid() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        eMid.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         //reset all notes
         reset();
         AudioInputStream note;
@@ -422,6 +531,11 @@ public class Control extends Application {
     }
 
     public void playFMid() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        fMid.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         //reset all notes
         reset();
         AudioInputStream note;
@@ -435,6 +549,11 @@ public class Control extends Application {
     }
 
     public void playFMidSharp() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        fSharpH.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         //reset all notes
         reset();
         //drop shadow and style current note
@@ -449,6 +568,11 @@ public class Control extends Application {
     }
 
     public void playGMid() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        gMid.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         //reset all notes
         reset();
         //drop shadow and style current note
@@ -463,6 +587,11 @@ public class Control extends Application {
     }
 
     public void playGMidSharp() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        gSharpH.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         //reset all notes
         reset();
         AudioInputStream note;
@@ -478,6 +607,11 @@ public class Control extends Application {
     //high
 
     public void playAHigh() throws UnsupportedAudioFileException, IOException, LineUnavailableException {
+        //reset all keys
+        resetKeys();
+        //light up key
+        aHigh.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203 0.3), 10, 0.5, 0.0, 0.0);");
+
         //reset all notes
         reset();
         AudioInputStream note;
@@ -510,5 +644,62 @@ public class Control extends Application {
         eight.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203, 0), 10, 0.5, 0.0, 0.0);");
         eight.setFill(Paint.valueOf("#000000"));
     }
-    
+
+    public void resetKeys(){
+
+        //low
+        aLow.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203, 0), 10, 0.5, 0.0, 0.0);");
+        bLow.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203, 0), 10, 0.5, 0.0, 0.0);");
+        cLow.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203, 0), 10, 0.5, 0.0, 0.0);");
+        dLow.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203, 0), 10, 0.5, 0.0, 0.0);");
+        eLow.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203, 0), 10, 0.5, 0.0, 0.0);");
+        fLow.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203, 0), 10, 0.5, 0.0, 0.0);");
+        gLow.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203, 0), 10, 0.5, 0.0, 0.0);");
+
+        //mid
+        aMid.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203, 0), 10, 0.5, 0.0, 0.0);");
+        bMid.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203, 0), 10, 0.5, 0.0, 0.0);");
+        cMid.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203, 0), 10, 0.5, 0.0, 0.0);");
+        dMid.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203, 0), 10, 0.5, 0.0, 0.0);");
+        eMid.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203, 0), 10, 0.5, 0.0, 0.0);");
+        fMid.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203, 0), 10, 0.5, 0.0, 0.0);");
+        gMid.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203, 0), 10, 0.5, 0.0, 0.0);");
+
+        //high
+        aHigh.setStyle("-fx-effect: dropshadow(gaussian, rgba(29,188,203, 0), 10, 0.5, 0.0, 0.0);");
+
+        //sharp
+        aSharp.setStyle("-fx-effect: dropshadow(gaussian, rgba(0,0,0 , .5), 10, 0.5, 0.0, 0.0);");
+        cSharp.setStyle("-fx-effect: dropshadow(gaussian, rgba(0,0,0, .5), 10, 0.5, 0.0, 0.0);");
+        dSharp.setStyle("-fx-effect: dropshadow(gaussian, rgba(0,0,0, .5), 10, 0.5, 0.0, 0.0);");
+        fSharp.setStyle("-fx-effect: dropshadow(gaussian, rgba(0,0,0, .5), 10, 0.5, 0.0, 0.0);");
+        gSharp.setStyle("-fx-effect: dropshadow(gaussian, rgba(0,0,0, .5), 10, 0.5, 0.0, 0.0);");
+        aSharpH.setStyle("-fx-effect: dropshadow(gaussian, rgba(0,0,0, .5), 10, 0.5, 0.0, 0.0);");
+        cSharpH.setStyle("-fx-effect: dropshadow(gaussian, rgba(0,0,0, .5), 10, 0.5, 0.0, 0.0);");
+        dSharpH.setStyle("-fx-effect: dropshadow(gaussian, rgba(0,0,0, .5), 10, 0.5, 0.0, 0.0);");
+        fSharpH.setStyle("-fx-effect: dropshadow(gaussian, rgba(0,0,0, .5), 10, 0.5, 0.0, 0.0);");
+        gSharpH.setStyle("-fx-effect: dropshadow(gaussian, rgba(0,0,0, .5), 10, 0.5, 0.0, 0.0);");
+
+
+    }
+    public void exitProgram() {
+        Platform.exit();
+    } //exit program
+
+    public void minimizeProgram() { //minimize window
+        Stage obj = (Stage) minimizeButton.getScene().getWindow(); //collapsing window
+        obj.setIconified(true); //to icon
+    }
+
+    public void moveToGourd(ActionEvent event) throws Exception {
+        Stage stage;//set stage
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/ucf/assignment/Gourd.fxml"))); //access the file needed to load FXML; this will be the source of the code
+        Scene scene = new Scene(root); // attach scene graph to scene
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Treble"); // displayed in window's title bar
+        stage.setScene(scene); // attach scene to stage
+        scene.getStylesheets().add("ucf/assignment/Style/piano.css"); //stylesheet on hand
+        stage.show(); // display the stage
+
+    }
 }

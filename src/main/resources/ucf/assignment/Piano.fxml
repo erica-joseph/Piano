@@ -6,260 +6,422 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="500.0" prefWidth="950.0" styleClass="#pane" stylesheets="@Style/piano.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control">
-   <children>
-      <ImageView fitHeight="506.0" fitWidth="1030.0" layoutX="-14.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Style/PianoSet5.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="aLow" layoutX="87.0" layoutY="297.0" mnemonicParsing="false" onAction="#playALow" onKeyPressed="#pressA" prefHeight="196.0" prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="A">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="Z" />
-         </tooltip>
-      </Button>
-      <Button fx:id="bLow" layoutX="139.0" layoutY="297.0" mnemonicParsing="false" onAction="#playBLow" prefHeight="196.0" prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="B">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="X" />
-         </tooltip>
-      </Button>
-      <Button fx:id="cLow" layoutX="191.0" layoutY="297.0" mnemonicParsing="false" onAction="#playCLow" prefHeight="196.0" prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="C">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="C" />
-         </tooltip>
-      </Button>
-      <Button fx:id="dLow" layoutX="243.0" layoutY="297.0" mnemonicParsing="false" onAction="#playDLow" prefHeight="196.0" prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="D">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="V" />
-         </tooltip>
-      </Button>
-      <Button fx:id="eLow" layoutX="295.0" layoutY="297.0" mnemonicParsing="false" onAction="#playELow" prefHeight="196.0" prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="E">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="B" />
-         </tooltip>
-      </Button>
-      <Button fx:id="fLow" layoutX="347.0" layoutY="297.0" mnemonicParsing="false" onAction="#playFLow" prefHeight="196.0" prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="F">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="N" />
-         </tooltip>
-      </Button>
-      <Button fx:id="gLow" layoutX="399.0" layoutY="297.0" mnemonicParsing="false" onAction="#playGLow" prefHeight="196.0" prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="G">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="M" />
-         </tooltip>
-      </Button>
-      <Button fx:id="aMid" layoutX="451.0" layoutY="297.0" mnemonicParsing="false" onAction="#playAMid" prefHeight="196.0" prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="A">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="A" />
-         </tooltip>
-      </Button>
-      <Button fx:id="bMid" layoutX="503.0" layoutY="297.0" mnemonicParsing="false" onAction="#playBMid" prefHeight="196.0" prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="B">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="S" />
-         </tooltip>
-      </Button>
-      <Button fx:id="cMid" layoutX="555.0" layoutY="297.0" mnemonicParsing="false" onAction="#playCMid" prefHeight="196.0" prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="C">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="D" />
-         </tooltip>
-      </Button>
-      <Button fx:id="dMid" layoutX="607.0" layoutY="297.0" mnemonicParsing="false" onAction="#playDMid" prefHeight="196.0" prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="D">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="F" />
-         </tooltip>
-      </Button>
-      <Button fx:id="eMid" layoutX="659.0" layoutY="297.0" mnemonicParsing="false" onAction="#playEMid" prefHeight="196.0" prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="E">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="J" />
-         </tooltip>
-      </Button>
-      <Button fx:id="fMid" layoutX="711.0" layoutY="297.0" mnemonicParsing="false" onAction="#playFMid" prefHeight="196.0" prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="F">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="K" />
-         </tooltip>
-      </Button>
-      <Button fx:id="gMid" layoutX="763.0" layoutY="297.0" mnemonicParsing="false" onAction="#playGMid" prefHeight="196.0" prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="G">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="L" />
-         </tooltip>
-      </Button>
-      <Button fx:id="aHigh" layoutX="815.0" layoutY="297.0" mnemonicParsing="false" onAction="#playAHigh" prefHeight="196.0" prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="A">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="Q" />
-         </tooltip>
-      </Button>
-      <Button fx:id="aSharp" layoutX="119.0" layoutY="290.0" mnemonicParsing="false" onAction="#playALowSharp" prefHeight="113.0" prefWidth="40.0" styleClass="button2" stylesheets="@Style/piano.css" text="A#" textFill="WHITE">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="W" />
-         </tooltip>
-      </Button>
-      <Button fx:id="cSharp" layoutX="223.0" layoutY="290.0" mnemonicParsing="false" onAction="#playCLowSharp" prefHeight="113.0" prefWidth="40.0" styleClass="button2" stylesheets="@Style/piano.css" text="C#" textFill="WHITE">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="E" />
-         </tooltip>
-      </Button>
-      <Button fx:id="dSharp" layoutX="275.0" layoutY="290.0" mnemonicParsing="false" onAction="#playDLowSharp" prefHeight="113.0" prefWidth="40.0" styleClass="button2" stylesheets="@Style/piano.css" text="D#" textFill="WHITE">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="R" />
-         </tooltip>
-      </Button>
-      <Button fx:id="fSharp" layoutX="380.0" layoutY="290.0" mnemonicParsing="false" onAction="#playFLowSharp" prefHeight="113.0" prefWidth="40.0" styleClass="button2" stylesheets="@Style/piano.css" text="F#" textFill="WHITE">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="T" />
-         </tooltip>
-      </Button>
-      <Button fx:id="gSharp" layoutX="432.0" layoutY="290.0" mnemonicParsing="false" onAction="#playGLowSharp" prefHeight="113.0" prefWidth="40.0" styleClass="button2" stylesheets="@Style/piano.css" text="G#" textFill="WHITE">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="Y" />
-         </tooltip>
-      </Button>
-      <Button fx:id="aSharpH" layoutX="484.0" layoutY="290.0" mnemonicParsing="false" onAction="#playAMidSharp" prefHeight="113.0" prefWidth="40.0" styleClass="button2" stylesheets="@Style/piano.css" text="A#" textFill="WHITE">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="U" />
-         </tooltip>
-      </Button>
-      <Button fx:id="cSharpH" layoutX="588.0" layoutY="290.0" mnemonicParsing="false" onAction="#playCMidSharp" prefHeight="113.0" prefWidth="40.0" styleClass="button2" stylesheets="@Style/piano.css" text="C#" textFill="WHITE">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="I" />
-         </tooltip>
-      </Button>
-      <Button fx:id="dSharpH" layoutX="639.0" layoutY="290.0" mnemonicParsing="false" onAction="#playDMidSharp" prefHeight="113.0" prefWidth="40.0" styleClass="button2" stylesheets="@Style/piano.css" text="D#" textFill="WHITE">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="O" />
-         </tooltip>
-      </Button>
-      <Button fx:id="fSharpH" layoutX="743.0" layoutY="290.0" mnemonicParsing="false" onAction="#playFMidSharp" prefHeight="113.0" prefWidth="40.0" styleClass="button2" stylesheets="@Style/piano.css" text="F#" textFill="WHITE">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="P" />
-         </tooltip>
-      </Button>
-      <Button fx:id="gSharpH" layoutX="795.0" layoutY="290.0" mnemonicParsing="false" onAction="#playGMidSharp" onTouchPressed="#playGMidSharp" prefHeight="113.0" prefWidth="40.0" styleClass="button2" stylesheets="@Style/piano.css" text="G#" textFill="WHITE">
-         <effect>
-            <DropShadow />
-         </effect>
-         <tooltip>
-            <Tooltip text="[" />
-         </tooltip>
-      </Button>
-      <Text layoutX="133.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes" text="G">
-         <font>
-            <Font size="200.0" />
-         </font>
-      </Text>
-      <Text fx:id="one" layoutX="208.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2" text="O">
-         <font>
-            <Font size="96.0" />
-         </font>
-      </Text>
-      <Text fx:id="two" layoutX="279.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2" text="O">
-         <font>
-            <Font size="96.0" />
-         </font>
-      </Text>
-      <Text fx:id="three" layoutX="357.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2" text="O">
-         <font>
-            <Font size="96.0" />
-         </font>
-      </Text>
-      <Text fx:id="four" layoutX="441.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2" text="O">
-         <font>
-            <Font size="96.0" />
-         </font>
-      </Text>
-      <Text fx:id="five" layoutX="523.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2" text="O">
-         <font>
-            <Font size="96.0" />
-         </font>
-      </Text>
-      <Text fx:id="six" layoutX="603.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2" text="O">
-         <font>
-            <Font size="96.0" />
-         </font>
-      </Text>
-      <Text fx:id="seven" layoutX="680.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2" text="O">
-         <font>
-            <Font size="96.0" />
-         </font>
-      </Text>
-      <Text fx:id="eight" layoutX="753.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2" text="O">
-         <font>
-            <Font size="96.0" />
-         </font>
-      </Text>
-   </children>
+<AnchorPane prefHeight="568.0" prefWidth="954.0" style="-fx-background-color: #000000;" styleClass="#pane"
+            stylesheets="@Style/piano.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Control">
+   <ImageView fitHeight="618.0" fitWidth="968.0" layoutX="-11.0" layoutY="22.0" pickOnBounds="true"
+              preserveRatio="true">
+      <Image url="@Style/PianoSet5.png"/>
+   </ImageView>
+   <Button fx:id="aLow" layoutX="90.0" layoutY="325.0" mnemonicParsing="false" onAction="#playALow" prefHeight="196.0"
+           prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="A">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="Z"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="bLow" layoutX="142.0" layoutY="325.0" mnemonicParsing="false" onAction="#playBLow" prefHeight="196.0"
+           prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="B">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="X"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="cLow" layoutX="194.0" layoutY="325.0" mnemonicParsing="false" onAction="#playCLow" prefHeight="196.0"
+           prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="C">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="C"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="dLow" layoutX="246.0" layoutY="325.0" mnemonicParsing="false" onAction="#playDLow" prefHeight="196.0"
+           prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="D">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="V"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="eLow" layoutX="298.0" layoutY="325.0" mnemonicParsing="false" onAction="#playELow" prefHeight="196.0"
+           prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="E">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="B"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="fLow" layoutX="350.0" layoutY="325.0" mnemonicParsing="false" onAction="#playFLow" prefHeight="196.0"
+           prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="F">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="N"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="gLow" layoutX="402.0" layoutY="325.0" mnemonicParsing="false" onAction="#playGLow" prefHeight="196.0"
+           prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="G">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="M"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="aMid" layoutX="454.0" layoutY="325.0" mnemonicParsing="false" onAction="#playAMid" prefHeight="196.0"
+           prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="A">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="A"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="bMid" layoutX="506.0" layoutY="325.0" mnemonicParsing="false" onAction="#playBMid" prefHeight="196.0"
+           prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="B">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="S"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="cMid" layoutX="558.0" layoutY="325.0" mnemonicParsing="false" onAction="#playCMid" prefHeight="196.0"
+           prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="C">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="D"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="dMid" layoutX="610.0" layoutY="325.0" mnemonicParsing="false" onAction="#playDMid" prefHeight="196.0"
+           prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="D">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="F"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="eMid" layoutX="662.0" layoutY="325.0" mnemonicParsing="false" onAction="#playEMid" prefHeight="196.0"
+           prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="E">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="J"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="fMid" layoutX="714.0" layoutY="325.0" mnemonicParsing="false" onAction="#playFMid" prefHeight="196.0"
+           prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="F">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="K"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="gMid" layoutX="766.0" layoutY="325.0" mnemonicParsing="false" onAction="#playGMid" prefHeight="196.0"
+           prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="G">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="L"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="aHigh" layoutX="818.0" layoutY="325.0" mnemonicParsing="false" onAction="#playAHigh"
+           prefHeight="196.0" prefWidth="52.0" styleClass="button1" stylesheets="@Style/piano.css" text="A">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="Q"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="aSharp" layoutX="122.0" layoutY="318.0" mnemonicParsing="false" onAction="#playALowSharp"
+           prefHeight="113.0" prefWidth="40.0" styleClass="button2" stylesheets="@Style/piano.css" text="A#"
+           textFill="WHITE">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="W"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="cSharp" layoutX="226.0" layoutY="318.0" mnemonicParsing="false" onAction="#playCLowSharp"
+           prefHeight="113.0" prefWidth="40.0" styleClass="button2" stylesheets="@Style/piano.css" text="C#"
+           textFill="WHITE">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="E"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="dSharp" layoutX="278.0" layoutY="318.0" mnemonicParsing="false" onAction="#playDLowSharp"
+           prefHeight="113.0" prefWidth="40.0" styleClass="button2" stylesheets="@Style/piano.css" text="D#"
+           textFill="WHITE">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="R"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="fSharp" layoutX="383.0" layoutY="318.0" mnemonicParsing="false" onAction="#playFLowSharp"
+           prefHeight="113.0" prefWidth="40.0" styleClass="button2" stylesheets="@Style/piano.css" text="F#"
+           textFill="WHITE">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="T"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="gSharp" layoutX="435.0" layoutY="318.0" mnemonicParsing="false" onAction="#playGLowSharp"
+           prefHeight="113.0" prefWidth="40.0" styleClass="button2" stylesheets="@Style/piano.css" text="G#"
+           textFill="WHITE">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="Y"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="aSharpH" layoutX="487.0" layoutY="318.0" mnemonicParsing="false" onAction="#playAMidSharp"
+           prefHeight="113.0" prefWidth="40.0" styleClass="button2" stylesheets="@Style/piano.css" text="A#"
+           textFill="WHITE">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="U"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="cSharpH" layoutX="591.0" layoutY="318.0" mnemonicParsing="false" onAction="#playCMidSharp"
+           prefHeight="113.0" prefWidth="40.0" styleClass="button2" stylesheets="@Style/piano.css" text="C#"
+           textFill="WHITE">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="I"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="dSharpH" layoutX="642.0" layoutY="318.0" mnemonicParsing="false" onAction="#playDMidSharp"
+           prefHeight="113.0" prefWidth="40.0" styleClass="button2" stylesheets="@Style/piano.css" text="D#"
+           textFill="WHITE">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="O"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="fSharpH" layoutX="746.0" layoutY="318.0" mnemonicParsing="false" onAction="#playFMidSharp"
+           prefHeight="113.0" prefWidth="40.0" styleClass="button2" stylesheets="@Style/piano.css" text="F#"
+           textFill="WHITE">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="P"/>
+      </tooltip>
+   </Button>
+   <Button fx:id="gSharpH" layoutX="798.0" layoutY="318.0" mnemonicParsing="false" onAction="#playGMidSharp"
+           onTouchPressed="#playGMidSharp" prefHeight="113.0" prefWidth="40.0" styleClass="button2"
+           stylesheets="@Style/piano.css" text="G#" textFill="WHITE">
+      <effect>
+         <DropShadow/>
+      </effect>
+      <tooltip>
+         <Tooltip text="["/>
+      </tooltip>
+   </Button>
+   <Text layoutX="136.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes" text="G">
+      <font>
+         <Font size="200.0"/>
+      </font>
+   </Text>
+   <Text fx:id="one" layoutX="211.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2"
+         text="O">
+      <font>
+         <Font size="96.0"/>
+      </font>
+   </Text>
+   <Text fx:id="two" layoutX="282.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2"
+         text="O">
+      <font>
+         <Font size="96.0"/>
+      </font>
+   </Text>
+   <Text fx:id="three" layoutX="360.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2"
+         text="O">
+      <font>
+         <Font size="96.0"/>
+      </font>
+   </Text>
+   <Text fx:id="four" layoutX="444.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2"
+         text="O">
+      <font>
+         <Font size="96.0"/>
+      </font>
+   </Text>
+   <Text fx:id="five" layoutX="526.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2"
+         text="O">
+      <font>
+         <Font size="96.0"/>
+      </font>
+   </Text>
+   <Text fx:id="six" layoutX="606.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2"
+         text="O">
+      <font>
+         <Font size="96.0"/>
+      </font>
+   </Text>
+   <Text fx:id="seven" layoutX="683.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2"
+         text="O">
+      <font>
+         <Font size="96.0"/>
+      </font>
+   </Text>
+   <Text fx:id="eight" layoutX="756.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="notes2"
+         text="O">
+      <font>
+         <Font size="96.0"/>
+      </font>
+   </Text>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" height="37.0" layoutX="-8.0" layoutY="-7.0" stroke="TRANSPARENT"
+              strokeType="INSIDE" width="962.0"/>
+   <ImageView fitHeight="19.0" fitWidth="171.0" layoutX="10.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@Style/TremoloLogo.png"/>
+   </ImageView>
+   <Rectangle arcHeight="5.0" arcWidth="5.0" height="35.0" layoutX="2.0" layoutY="292.0" stroke="TRANSPARENT"
+              strokeType="INSIDE" width="962.0"/>
+   <Button fx:id="exitButton" layoutX="931.0" layoutY="-1.0" mnemonicParsing="false" onAction="#exitProgram"
+           style="-fx-font-weight: BOLD;" styleClass="exit" text="✖">
+      <textFill>
+         <LinearGradient>
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.10196078568696976" green="0.6549019813537598" blue="0.7098039388656616"/>
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.03921568766236305" green="0.3529411852359772" blue="0.3843137323856354"/>
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
+   </Button>
+   <Button fx:id="minimizeButton" layoutX="912.0" layoutY="-5.0" mnemonicParsing="false" onAction="#minimizeProgram"
+           style="-fx-font-weight: BOLD;" styleClass="exit" text="▃">
+      <textFill>
+         <LinearGradient>
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.10196078568696976" green="0.6549019813537598" blue="0.7098039388656616"/>
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.03921568766236305" green="0.3529411852359772" blue="0.3843137323856354"/>
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
+   </Button>
+   <Button fx:id="Start" layoutX="-16.0" layoutY="30.0" mnemonicParsing="false" onAction="#pressA" prefHeight="72.0"
+           prefWidth="127.0" style="-fx-padding: 0px;" styleClass="key" text="⌨">
+      <textFill>
+         <LinearGradient>
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.10196078568696976" green="0.6549019813537598" blue="0.7098039388656616"/>
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.03921568766236305" green="0.3529411852359772" blue="0.3843137323856354"/>
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
+      <tooltip>
+         <Tooltip text="Keyboard Control">
+            <font>
+               <Font name="Arial" size="12.0"/>
+            </font>
+         </Tooltip>
+      </tooltip>
+   </Button>
+   <Button fx:id="gourd" layoutX="-21.0" layoutY="112.0" mnemonicParsing="false" onAction="#moveToGourd"
+           prefHeight="72.0" prefWidth="127.0" style="-fx-padding: 0px;" styleClass="gourd" text="i">
+      <textFill>
+         <LinearGradient>
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.10196078568696976" green="0.6549019813537598" blue="0.7098039388656616"/>
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.03921568766236305" green="0.3529411852359772" blue="0.3843137323856354"/>
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
+      <tooltip>
+         <Tooltip text="Hulusi">
+            <font>
+               <Font name="Arial" size="12.0"/>
+            </font>
+         </Tooltip>
+      </tooltip>
+   </Button>
+   <Button fx:id="piano" layoutX="-21.0" layoutY="185.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="127.0"
+           style="-fx-padding: 0px;" styleClass="piano" text="7">
+      <textFill>
+         <LinearGradient>
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.10196078568696976" green="0.6549019813537598" blue="0.7098039388656616"/>
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color red="0.03921568766236305" green="0.3529411852359772" blue="0.3843137323856354"/>
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </textFill>
+   </Button>
 </AnchorPane>

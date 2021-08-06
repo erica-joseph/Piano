@@ -2,6 +2,7 @@
  *  UCF COP3330 Summer 2021 Assignment 5 Solution
  *  Copyright 2021 Erica Joseph
  */
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,14 +17,14 @@ public class Main extends Application {
 
 
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) {
         try {
             Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/ucf/assignment/Piano.fxml"))); //access the file needed to load FXML; this will be the source of the code
             Scene scene = new Scene(root); // attach scene graph to scene
             stage.setTitle("Treble"); // displayed in window's title bar
-            //stage.getIcons().add(new Image("ucf/assignment/Style/FInishNext4.png"));
+            stage.getIcons().add(new Image("ucf/assignment/Style/TremoloMono.png"));
             stage.setScene(scene); // attach scene to stage
-            //stage.initStyle(StageStyle.UNDECORATED);
+            stage.initStyle(StageStyle.UNDECORATED);
             scene.getStylesheets().add("ucf/assignment/Style/piano.css"); //stylesheet on hand
             stage.show(); // display the stage
         }
